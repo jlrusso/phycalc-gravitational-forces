@@ -876,11 +876,11 @@ input[type="radio"] {
 	background-color: rgba(0,0,0,0.7) !important;
 }
 .modal-header h4 {
-  max-width: 200px;
+  width: 300px;
   margin:auto;
   background-color: #333;
   padding:5px;
-  border-radius: 10px;
+  border-radius: 4px;
   color:#F1C40F;
 }
 .modal-footer-btn {
@@ -900,14 +900,12 @@ input[type="radio"] {
   box-shadow: 0 0 15px rgba(0,0,0,0.9);
   outline: none;
 }
-
 .line-divider {
   width:90%;
   height:2px;
   margin:25px auto;
   background-color: rgba(0,0,0,0.3);
 }
-
 button.accordion {
     background-color: #333;
     color: #F1C40F;
@@ -921,7 +919,6 @@ button.accordion {
     font-weight: bold;
     transition: 0.4s;
 }
-
 button.accordion:after {
     content: '\002B';
     color: #F1C40F;
@@ -929,7 +926,6 @@ button.accordion:after {
     float: right;
     margin-left: 5px;
 }
-
 button.accordion.active:after {
     content: "\2212";
     color: #F1C40F;
@@ -937,14 +933,12 @@ button.accordion.active:after {
     float: right;
     margin-left: 5px;
 }
-
 .first-accordion {
-  border-radius: 10px 10px 0 0;
+  border-radius: 4px 4px 0 0;
 }
 .last-accordion {
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 4px 4px;
 }
-
 .modal-body .modal-panel {
     padding: 0 18px;
     background-color: white;
@@ -1352,6 +1346,9 @@ button.accordion.active:after {
   .img-caption p {
 		font-size: 1.35rem;
 	}
+  .modal-header h4 {
+    max-width: 100%;
+  }
 }
 @media screen and (max-width: 320px){
   #outer-image-container,

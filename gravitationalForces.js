@@ -90,6 +90,25 @@ function showAnchors(){
 		}
 	}
 }
+/*--- Toggle Hamburger Menu ---*/
+var icon = document.getElementById("icon");
+var clickBox = document.getElementById("click-box");
+var verticalNav = document.getElementsByClassName("vertical-nav")[0];
+clickBox.addEventListener("click", toggleVerticalNav, false);
+
+function toggleVerticalNav(e){
+	icon.classList.toggle("active");
+	verticalNav.classList.toggle("show-vertical-nav");
+}
+
+window.onclick = function(e){
+	if(!e.target.matches("#click-box")){
+		if(icon.classList.contains("active")){
+			icon.classList.remove("active");
+			verticalNav.classList.remove("show-vertical-nav");
+		}
+	}
+}
 /*--- Open and Close Modal Panels ---*/
 var acc = document.getElementsByClassName("accordion");
 var i;
@@ -104,85 +123,6 @@ for (i = 0; i < acc.length; i++) {
         }
     }
 }
-/*--- End of Modal Accordions ---*/
-
-
-
-window.onload = function(){
-	var openSearchBtn = document.getElementById("open-search-btn"),
-		openSearchBtnTwo = document.getElementById("open-search-btn-two"),
-		searchSection = document.getElementById("search-section"),
-		searchBar = document.getElementById("search-bar"),
-		closeSearchBtn = document.getElementById("close-search-btn");
-
-	openSearchBtn.addEventListener("click", openSearchSection);
-	openSearchBtnTwo.addEventListener("click", openSearchSection);
-
-	function openSearchSection(){
-		searchSection.style.top = "50px";
-		searchSection.style.width = "100%";
-	}
-
-	closeSearchBtn.addEventListener("click", function(){
-		searchSection.style.top = "-100px";
-	});
-
-
-
-	function showList() {
-		if (navSearchBar.value.length > 0){
-			caseList.classList.add('show');
-			navSearchBar.style.borderRadius = "10px 10px 0 0";
-			showAnchors();
-		} else {
-			caseList.classList.remove('show');
-			navSearchBar.style.borderRadius = "10px";
-		}
-	}
-
-	function showAnchors(){
-		let inputValue = navSearchBar.value.toUpperCase();
-		let anchors = caseList.getElementsByTagName('a');
-		let newAnchors = document.createElement("a");
-		for (var i = 0; i < anchors.length; i++){
-			let a = anchors[i];
-			if (a.textContent.toUpperCase().indexOf(inputValue) > -1){
-				anchors[i].style.display = "";
-			} else {
-				anchors[i].style.display = "none";
-			}
-		}
-	}
-
-	window.onclick = function(event){
-		if (!event.target.matches('#nav-search-bar')){
-			if (caseList.classList.contains('show')){
-				caseList.classList.remove('show');
-				navSearchBar.style.borderRadius = "10px";
-			}
-		}
-	}
-	/*--- Toggle Hamburger Menu ---*/
-	var icon = document.getElementById("icon");
-	var clickBox = document.getElementById("click-box");
-	var verticalNav = document.getElementsByClassName("vertical-nav")[0];
-	clickBox.addEventListener("click", toggleVerticalNav, false);
-
-	function toggleVerticalNav(e){
-		icon.classList.toggle("active");
-		verticalNav.classList.toggle("show-vertical-nav");
-	}
-
-	window.onclick = function(e){
-		if(!e.target.matches("#click-box")){
-			if(icon.classList.contains("active")){
-				icon.classList.remove("active");
-				verticalNav.classList.remove("show-vertical-nav");
-			}
-		}
-	}
-}
-
 
 	/*--- Topic Calculators ---*/
 	var objectBtns = document.getElementsByClassName("object-btn"),

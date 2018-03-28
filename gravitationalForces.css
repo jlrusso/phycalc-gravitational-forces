@@ -538,12 +538,6 @@ input[type="radio"] {
 
 
 /*--- Equation Pics and Form Controls ---*/
-#solo-image img {
-  width: 100%;
-  height: 130px;
-  border-radius: 4px;
-  box-shadow: 0 0 10px #333;
-}
 #outer-image-container {
   position: relative;
   width: 100%;
@@ -632,6 +626,16 @@ input[type="radio"] {
 .#outer-image-container:hover #next-slide-btn {
   opacity: 1;
   border-radius: 0;
+}
+#solo-image {
+  background-color: white;
+}
+#solo-image img {
+  width: 100%;
+  height: 130px;
+  border-radius: 4px;
+  padding: 5px;
+  box-shadow: 0 0 10px #333;
 }
 /*--- Background Modules ---*/
 #background-heading {

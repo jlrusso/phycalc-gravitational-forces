@@ -421,16 +421,12 @@ a.next-page-btn:hover .glyphicon-chevron-right {
 /*--- Topic Calculator and Equation*/
 .object-selection,
 .unit-selection,
-.solve-for-selection {
+.solve-selection {
   background: #333 !important;
   color: #F1C40F !important;
   font-weight: normal !important;
   border-radius: 5px;
-}
-.solve-for-selection,
-.unit-selection,
-.object-selection {
-  padding: 8px 8px 5px;
+  padding: 10px 10px 6px;
   margin-bottom: 5px;
   vertical-align: middle;
 }
@@ -449,12 +445,15 @@ a.next-page-btn:hover .glyphicon-chevron-right {
   -moz-user-select:none;
   -ms-user-select:none;
 }
+.radio-btn:last-child {
+	margin-right: 5px;
+}
 .radio-btn input {
   display:none;
 }
 .checkmark {
   padding: 3px 10px 5px;
-  border-radius: 20px;
+  border-radius: 4px;
   border: 1.5px solid #F1C40F;
 }
 .radio-btn:hover input + .checkmark {
@@ -947,6 +946,15 @@ button.accordion.active:after {
 .modal-header-btn:hover {
   background-color:#F1C40F;
   color: #333;
+}
+@media screen and (max-width: 1200px){
+  .object-selection,
+  .solve-selection,
+  .unit-selection {
+    width: auto;
+		white-space: nowrap;
+		overflow-x: scroll !important;
+  }
 }
 @media screen and (max-width: 700px){
   .section-heading {

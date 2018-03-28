@@ -959,3 +959,28 @@ button.accordion.active:after {
   background-color:#F1C40F;
   color: #333;
 }
+@media screen and (max-width: 650px){
+  #search-form {
+    margin-left: 0;
+    width: 85%;
+  }
+  #search-case-list a {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 550px){
+  .horizontal-nav {
+		display: none;
+	}
+	#icon {
+		display: block;
+		opacity: 1;
+	}
+}
+@media screen and (max-width: 360px){
+  #search-form {
+		margin-left: 0;
+		width: 83%;
+	}
+}

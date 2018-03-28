@@ -551,3 +551,15 @@ var moduleImageContainer = document.getElementById("module-img-inner"),
 		switchModuleImage();
 	}
 /*--- End of Module Images ---*/
+
+/*--- Toggle Img Caption Show/Hide ---*/
+var imgCaptions = document.getElementsByClassName("img-caption");
+var thirdPageImgs = document.querySelectorAll(".third-page-pics > input[type='image']");
+thirdPageImgs.forEach(function(image){
+  image.addEventListener("click", function(e){
+    var imgCaption = this.nextElementSibling;
+    if(!e.target.matches(".img-caption")){
+      imgCaption.classList.toggle("hide-caption");
+    }
+  })
+})

@@ -1,3 +1,95 @@
+$(window).on('beforeunload', function() {
+   $(window).scrollTop(0);
+});
+
+$(document).ready(function(){
+  $("#conversion-btn").click(function(){
+    $("html, body").animate({
+      scrollTop: $("#conversion-container").offset().top
+    }, "slow")
+  });
+  $("#vert-conversion-btn").click(function(){
+    $("html, body").animate({
+      scrollTop: $("#conversion-container").offset().top
+    }, "slow")
+  });
+  $("#examples-btn").click(function(){
+    $("html, body").animate({
+      scrollTop: $("#practice-btns-container").offset().top
+    }, "slow")
+  });
+  $("#vert-examples-btn").click(function(){
+    $("html, body").animate({
+      scrollTop: $("#practice-btns-container").offset().top
+    }, "slow")
+  });
+})
+
+var horizontalSearchBtn = document.getElementById("horizontal-search-btn"),
+    verticalSearchBtn = document.getElementById("vertical-search-btn"),
+    searchSection = document.getElementById("search-section"),
+    searchBar = document.getElementById("search-bar"),
+    closeSearchBtn = document.getElementById("close-search-btn"),
+    caseList = document.getElementById("search-case-list"),
+    mainContent = document.getElementById("main-content");
+
+horizontalSearchBtn.addEventListener("click", openSearchSection);
+verticalSearchBtn.addEventListener("click", openSearchSection);
+searchBar.addEventListener("input", showList);
+closeSearchBtn.addEventListener("click", closeSearchSection);
+
+function openSearchSection(){
+	if(!searchSection.classList.contains("active-search")){
+		searchSection.classList.toggle("active-search");
+		mainContent.style.marginTop = "30px";
+		searchBar.focus();
+	} else {
+		searchSection.classList.remove("active-search");
+		caseList.classList.remove("show");
+		searchBar.value = "";
+		mainContent.style.marginTop = "0";
+	}
+}
+
+function closeSearchSection(){
+	if(searchSection.classList.contains("active-search")){
+		searchSection.classList.remove("active-search");
+		caseList.classList.remove("show");
+		searchBar.value  = "";
+		document.getElementById("main-content").style.marginTop = "0";
+	}
+}
+var searchClosers = [searchSection, mainContent];
+for(let i = 0; i < searchClosers.length; i++){
+  searchClosers[i].addEventListener("click", function(e){
+    if(!e.target.matches("#search-bar")){
+      closeSearchSection();
+    }
+  })
+}
+
+function showList() {
+	if (searchBar.value.length > 0){
+		caseList.classList.add('show');
+		showAnchors();
+	} else {
+		caseList.classList.remove('show');
+	}
+}
+
+function showAnchors(){
+	let inputValue = searchBar.value.toUpperCase();
+	let anchors = caseList.getElementsByTagName('a');
+	let newAnchors = document.createElement("a");
+	for (var i = 0; i < anchors.length; i++){
+		let a = anchors[i];
+		if (a.textContent.toUpperCase().indexOf(inputValue) > -1){
+			anchors[i].style.display = "";
+		} else {
+			anchors[i].style.display = "none";
+		}
+	}
+}
 /*--- Open and Close Modal Panels ---*/
 var acc = document.getElementsByClassName("accordion");
 var i;
@@ -9,7 +101,7 @@ for (i = 0; i < acc.length; i++) {
             panel.style.maxHeight = null;
         } else {
             panel.style.maxHeight = panel.scrollHeight + "px";
-        } 
+        }
     }
 }
 /*--- End of Modal Accordions ---*/
@@ -34,7 +126,7 @@ window.onload = function(){
 	closeSearchBtn.addEventListener("click", function(){
 		searchSection.style.top = "-100px";
 	});
-	
+
 
 
 	function showList() {
@@ -67,7 +159,7 @@ window.onload = function(){
 			if (caseList.classList.contains('show')){
 				caseList.classList.remove('show');
 				navSearchBar.style.borderRadius = "10px";
-			} 
+			}
 		}
 	}
 	/*--- Toggle Hamburger Menu ---*/
@@ -181,7 +273,7 @@ window.onload = function(){
 			solveGravityBtn.disabled = true;
 			gravityField.disabled = true;
 		}
-		
+
 	}
 
 	function solveForBtnFunction(){
@@ -262,7 +354,7 @@ window.onload = function(){
 				currentSlideIndex = 5;
 				switchToSlide();
 			break;
-			case (solveRadiusBtn.checked && !twoObjectsBtn.checked): 
+			case (solveRadiusBtn.checked && !twoObjectsBtn.checked):
 				metersBtn.checked = true;
 				metersBtn.disabled = false;
 				centersDistance.type = "text";
@@ -272,7 +364,7 @@ window.onload = function(){
 				currentSlideIndex = 2;
 				switchToSlide();
 			break;
-			case (solveRadiusBtn.checked && twoObjectsBtn.checked): 
+			case (solveRadiusBtn.checked && twoObjectsBtn.checked):
 				metersBtn.checked = true;
 				metersBtn.disabled = false;
 				centersDistance.type = "text";
@@ -446,7 +538,7 @@ window.onload = function(){
 	}
 
 
-	
+
 	/*--- End of Topic Calculators ---*/
 
 
@@ -499,7 +591,6 @@ var moduleImageContainer = document.getElementById("module-img-inner"),
 	nextBtn2.addEventListener("click", nextModuleImage);
 
 	function switchModuleImage(){
-		console.log(currentModuleImage);
 		moduleImageContainer.style.left = -moduleWidth * currentModuleImage + "%";
 	}
 	switchModuleImage();
@@ -520,8 +611,3 @@ var moduleImageContainer = document.getElementById("module-img-inner"),
 		switchModuleImage();
 	}
 /*--- End of Module Images ---*/
-
-	
-
-
-

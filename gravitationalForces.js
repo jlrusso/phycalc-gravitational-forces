@@ -2,7 +2,17 @@ $(window).on('beforeunload', function() {
    $(window).scrollTop(0);
 });
 
+var calculatorBtn = document.getElementById("calculator-btn");
+calculatorBtn.setAttribute("data-toggle", "modal");
+calculatorBtn.setAttribute("data-target", "#calculator-modal");
+
 $(document).ready(function(){
+  $("#contact-btn").add("#vert-contact-btn").remove();
+  var $calcParentLi = $("#calculator-btn").parent("li");
+  $calcParentLi.before("<li><a href='#' id='examples-btn'>Examples</a></li>");
+  var $vertCalcParentLi = $("#vert-calculator-btn").parent("li");
+  $vertCalcParentLi.before("<li><a href='#' id='vert-examples-btn'>Examples</a></li>");
+
   $("#conversion-btn").click(function(){
     $("html, body").animate({
       scrollTop: $("#conversion-container").offset().top

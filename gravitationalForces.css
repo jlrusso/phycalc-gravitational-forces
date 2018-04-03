@@ -763,14 +763,14 @@ input[type="radio"] {
 .third-page-pics {
   position: relative;
 }
-.third-page-pics input[type="image"] {
+.third-page-pics img {
   width:100%;
   height:230px;
   border-radius: 4px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	transition: 0.4s;
 }
-.third-page-pics input[type="image"]:focus {
-  outline: none;
+.third-page-pics:hover img {
+	box-shadow: 0 0 10px var(--main-black-color);
 }
 .img-caption {
   width: 85%;
@@ -796,6 +796,9 @@ input[type="radio"] {
   font-weight: bold;
 }
 /*--- Practice btn ---*/
+#practice-btns-outer {
+	padding: 0 30px;
+}
 #practice-btns-container {
 	width: 65%;
 	margin: auto;
@@ -822,14 +825,18 @@ input[type="radio"] {
 	outline: none;
 }
 /*--- Start of Conversion Section ---*/
+	#conversion-outer {
+		padding: 0 15px;
+	}
   #conversion-container {
     position: relative;
     width: 550px;
     height: auto;
     margin: 20px auto 0;
     padding: 10px;
+		border: 2px solid var(--main-black-color);
     border-radius: 4px;
-    background-color: #333;
+    background-color: transparent;
     text-align: center;
   }
   #conversion-heading {
@@ -838,9 +845,10 @@ input[type="radio"] {
     margin: auto;
     margin-bottom: 10px;
     padding: 5px;
-    border-radius: 3px;
-    background-color: var(--main-yellow-color);
+    border-radius: 4px;
+    background-color: var(--main-black-color);
     font-size: 1.7rem;
+		color: var(--main-yellow-color);
   }
   .input-option-input {
     width: 100%;
@@ -852,9 +860,10 @@ input[type="radio"] {
     width: 100%;
 		max-height: 200px;
     padding: 8px;
-    border: 0;
-    background-color: var(--main-yellow-color);
-    color: #333;
+    border: 2px solid var(--main-black-color);
+		border-radius: 4px;
+    background-color: transparent;
+    color: var(--main-black-color);
     font-size: 1.5rem;
     font-weight: bold;
     outline: none;
@@ -864,15 +873,15 @@ input[type="radio"] {
     width: 100%;
     padding: 9px;
     border-radius: 4px;
-    border: 2px solid var(--main-yellow-color);
-    color: var(--main-yellow-color);
-    background-color: #333;
+    border: 2px solid var(--main-black-color);
+    color: var(--main-black-color);
+    background-color: transparent;
     font-size: 1.4rem;
+		font-weight: bold;
     outline: none;
   }
-	#unit-converter {
-		background-color: var(--main-yellow-color);
-		border-radius: 4px;
+	.input-option-input input::placeholder {
+		color: var(--main-black-color);
 	}
 
 /*--- Modal ---*/
@@ -1189,7 +1198,7 @@ button.accordion.active:after {
 		height: auto;
 		margin: 0 auto 20px !important;
 	}
-	.third-page-pics input[type="image"] {
+	.third-page-pics img {
 		height: auto;
 	}
   .img-caption {
@@ -1207,7 +1216,7 @@ button.accordion.active:after {
 		height: 178px;
 	}
   #practice-btns-container {
-		width: 95%;
+		width: 100%;
 	}
 	.practice-btn {
 		font-size: 1.4rem;
@@ -1250,12 +1259,12 @@ button.accordion.active:after {
 		margin-bottom: 10px;
 	}
 	.practice-btn {
-		width: 90%;
+		width: 100%;
 		margin: 0 auto 10px;
 		font-size: 1.7rem;
 	}
   #conversion-container {
-		width: 90%;
+		width: 100%;
 		margin: auto;
 	}
 }

@@ -41,11 +41,11 @@
 										<span><b># of Objects:&nbsp;</b></span>
 										<label class="radio-btn">
 										 	<input type="radio" class="object-btn" name="radio" id="one-object-radio-btn">
-										    <span class="checkmark">One</span> |
+										    <span class="checkmark">one</span> |
 										</label>
 										<label class="radio-btn">
 										    <input type="radio" class="object-btn" name="radio" id="two-objects-radio-btn">
-										    <span class="checkmark">Two</span>
+										    <span class="checkmark">two</span>
 										</label>
 									</form>
 								</div>
@@ -251,19 +251,19 @@
 				<div class="panel-body" id="third-pics-panel">
 					<div class="row animated fadeInLeft">
 						<div class="col-sm-4 third-page-pics">
-							<input type="image" src="../img/shuttle.jpg" alt="Shuttle" class="img-responsive"/>
+							<img src="../img/shuttle.jpg" alt="Shuttle" class="img-responsive"/>
 							<div class="img-caption">
 								<p>As a space shuttle gets farther away from earth, the Force(grav) from earth on the shuttle gets weaker<a href="https://www.nasa.gov/audience/forstudents/5-8/features/nasa-knows/what-is-microgravity-58.html" target="_blank"/> (Source)</a></p>
 							</div>
 						</div>
 						<div class="col-sm-4 third-page-pics">
-							<input type="image" src="../img/space-station.jpg" alt="Space Station" class="img-responsive"/>
+							<img src="../img/space-station.jpg" alt="Space Station" class="img-responsive"/>
 							<div class="img-caption">
 								<p>Since the ISS orbits 200 - 250 mi above earth, the Force(grav) on it is around 90% of that on earth<a href="https://www.nasa.gov/audience/forstudents/5-8/features/nasa-knows/what-is-microgravity-58.html" target="_blank"/> (Source)</a></p>
 							</div>
 						</div>
 						<div class="col-sm-4 third-page-pics">
-							<input type="image" src="../img/raptor.jpeg" alt="F-22 Raptor" class="img-responsive"/>
+							<img src="../img/raptor.jpeg" alt="F-22 Raptor" class="img-responsive"/>
 							<div class="img-caption">
 								<p>The F-22 raptor can reach up to 9 Gs (1G = 9.81 m/s2) which can cause an inexperienced pilot to pass out<a href="https://en.wikipedia.org/wiki/Mazda_RX-8" target="_blank"/> (Source)</a></p>
 							</div>

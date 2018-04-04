@@ -458,6 +458,11 @@
 						</div>
 						<!-- End of Calculator Modal -->
 
+						<!-- Go back to top -->
+						<div id="go-up-container">
+							<button type="button" id="go-up-btn"><span class="glyphicon glyphicon-chevron-up"></span></button>
+						</div>
+
 
 
 		<div class="row">

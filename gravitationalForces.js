@@ -33,6 +33,35 @@ $(document).ready(function(){
       scrollTop: $("#practice-btns-container").offset().top
     }, "slow")
   });
+  $("#go-up-btn").click(function(){
+    $("html, body").animate({
+      scrollTop: 0
+    }, "slow")
+  });
+})
+
+window.addEventListener("resize", function(){
+  if(window.innerWidth < 992){
+    $(window).scroll(function(){
+      if($(window).scrollTop() > 600){
+        $("#go-up-container").css({"opacity":"1", "z-index":"4"});
+      } else {
+        $("#go-up-container").css({"opacity":"0", "z-index":"-1"});
+      }
+    })
+  }
+})
+
+window.addEventListener("load", function(){
+  if(window.innerWidth < 992){
+    $(window).scroll(function(){
+      if($(window).scrollTop() > 600){
+        $("#go-up-container").css({"opacity":"1", "z-index":"4"});
+      } else {
+        $("#go-up-container").css({"opacity":"0", "z-index":"-1"});
+      }
+    })
+  }
 })
 
 var horizontalSearchBtn = document.getElementById("horizontal-search-btn"),

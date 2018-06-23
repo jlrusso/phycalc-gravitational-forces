@@ -274,6 +274,8 @@ $(".example-modal").click(function(e){
 		} else if (twoObjectsBtn.checked){
 			solveGravityBtn.disabled = true;
 			gravityField.disabled = true;
+      currentSlideIndex = 1;
+      switchToSlide();
 		}
 
 	}
@@ -397,8 +399,8 @@ $(".example-modal").click(function(e){
 				function setTempGravity(){
 					var tempGravity = (gravitationalConstant * bigMassField.value) / Math.pow(centersDistance.value, 2);
 					function setFinalGravity(){
-						if(tempGravity.toString().length > 9){
-							gravityField.value = tempGravity.toPrecision(sigFigsField.value || 9) + " N";
+						if(tempGravity.toString().length > 5){
+							gravityField.value = tempGravity.toPrecision(sigFigsField.value || 5) + " N";
 						} else {
 							gravityField.value = tempGravity.toPrecision(sigFigsField.value || tempGravity.toString().length) + " N";
 						}
@@ -411,8 +413,8 @@ $(".example-modal").click(function(e){
 				function setTempBigMass(){
 					var tempBigMass = (gravityField.value * Math.pow(centersDistance.value, 2)) / gravitationalConstant;
 					function setFinalBigMass(){
-						if(tempBigMass.toString().length > 9){
-							bigMassField.value = tempBigMass.toPrecision(sigFigsField.value || 9) + " kg";
+						if(tempBigMass.toString().length > 5){
+							bigMassField.value = tempBigMass.toPrecision(sigFigsField.value || 5) + " kg";
 						} else {
 							bigMassField.value = tempBigMass.toPrecision(sigFigsField.value || tempBigMass.toString().length) + " kg";
 						}
@@ -425,8 +427,8 @@ $(".example-modal").click(function(e){
 				function setTempRadius(){
 					var tempRadius = Math.sqrt(gravitationalConstant * bigMassField.value / gravityField.value);
 					function setFinalRadius(){
-						if(tempRadius.toString().length > 9){
-							centersDistance.value = tempRadius.toPrecision(sigFigsField.value || 9) + " m";
+						if(tempRadius.toString().length > 5){
+							centersDistance.value = tempRadius.toPrecision(sigFigsField.value || 5) + " m";
 						} else {
 							centersDistance.value = tempRadius.toPrecision(sigFigsField.value || tempRadius.toString().length) + " m";
 						}
@@ -439,8 +441,8 @@ $(".example-modal").click(function(e){
 				function setTempForce(){
 					var tempForce = gravitationalConstant * bigMassField.value * smallMassField.value / Math.pow(centersDistance.value, 2);
 					function setFinalForce(){
-						if(tempForce.toString().length > 9){
-							forceField.value = tempForce.toPrecision(sigFigsField.value || 9) + " N";
+						if(tempForce.toString().length > 5){
+							forceField.value = tempForce.toPrecision(sigFigsField.value || 5) + " N";
 						} else {
 							forceField.value = tempForce.toPrecision(sigFigsField.value || tempForce.toString().length) + " N";
 						}
@@ -453,8 +455,8 @@ $(".example-modal").click(function(e){
 				function setTempRadiusTwo(){
 					var tempRadius = Math.sqrt(gravitationalConstant * bigMassField.value * smallMassField.value / forceField.value);
 					function setFinalRadiusTwo(){
-						if(tempRadius.toString().length > 9){
-							centersDistance.value = tempRadius.toPrecision(sigFigsField.value || 9) + " m";
+						if(tempRadius.toString().length > 5){
+							centersDistance.value = tempRadius.toPrecision(sigFigsField.value || 5) + " m";
 						} else {
 							centersDistance.value = tempRadius.toPrecision(sigFigsField.value || tempRadius.toString().length) + " m";
 						}
@@ -467,8 +469,8 @@ $(".example-modal").click(function(e){
 				function setTempBigMassTwo(){
 					var tempBigMass = forceField.value * (Math.pow(centersDistance.value, 2)) / (gravitationalConstant * smallMassField.value);
 					function setFinalBigMassTwo(){
-						if(tempBigMass.toString().length > 9){
-							bigMassField.value = tempBigMass.toPrecision(sigFigsField.value || 9) + " kg";
+						if(tempBigMass.toString().length > 5){
+							bigMassField.value = tempBigMass.toPrecision(sigFigsField.value || 5) + " kg";
 						} else {
 							bigMassField.value = tempBigMass.toPrecision(sigFigsField.value || tempBigMass.toString().length) + " kg";
 						}
@@ -481,10 +483,10 @@ $(".example-modal").click(function(e){
 				function setTempSmallMassTwo(){
 					var tempSmallMass = forceField.value * (Math.pow(centersDistance.value, 2)) / (gravitationalConstant * bigMassField.value);
 					function setFinalSmallMassTwo(){
-						if(tempSmallMass.toString().length > 9){
-							smallMassField.value = tempSmallMass.toPrecision(sigFigsField.value || 9) + " kg";
+						if(tempSmallMass.toString().length > 5){
+							smallMassField.value = tempSmallMass.toPrecision(sigFigsField.value || 5) + " kg";
 						} else {
-							smallMassField.value = tempSmallMass.toPrecision(sigFigsField.value || 9) + " kg";
+							smallMassField.value = tempSmallMass.toPrecision(sigFigsField.value || 5) + " kg";
 						}
 					}
 					setFinalSmallMassTwo();

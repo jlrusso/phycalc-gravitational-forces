@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>PhyCalc | Physics Calculators</title>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta property="description" content="Here, we cover the aspects of G-Forces, including Newton's laws, acceleration, action-reaction pairs, and enable you to solve your own practice problems">
+	<title>IP | Gravitational Forces</title>
+	<link rel="shortcut icon" href="/img/ip-logo.ico" type="image/ico">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
@@ -15,7 +17,7 @@
 <body>
 
 	<?php
-		include_once "navSearch.php";
+		include_once "nav-template.php";
 	?>
 
 	<section id="main-content">
@@ -92,7 +94,7 @@
 										    <span class="checkmark">meters</span> |
 										</label>
 										<label class="radio-btn">
-										    <input type="radio" class="unit-btn" units="m" name="radio-two" id="accl-units-radio-btn">
+										    <input type="radio" class="unit-btn" units="m/s^2" name="radio-two" id="accl-units-radio-btn">
 										    <span class="checkmark">m/s<sup>2</sup></span>
 										</label>
 									</form>
@@ -126,13 +128,13 @@
 									</div>
 									<div id="outer-image-container">
 										<div id="inner-image-container">
-											<img src="../img/gravitational-forces-one.png" class="img-responsive slide" alt="Gravitational Force Equation 2"/>
-											<img src="../img/gravitational-forces-two.png" class="img-responsive slide" alt="Gravitational Force Equation 3"/>
-											<img src="../img/gravitational-forces-three.png" class="img-responsive slide" alt="Gravitational Force Equation 3"/>
-											<img src="../img/gravitational-forces-four.png" class="img-responsive slide" alt="Gravitational Force Equation 3"/>
-											<img src="../img/gravitational-forces-five.png" class="img-responsive slide" alt="Gravitational Force Equation 3"/>
-											<img src="../img/gravitational-forces-six.png" class="img-responsive slide" alt="Gravitational Force Equation 3"/>
-											<img src="../img/gravitational-forces-seven.png" class="img-responsive slide" alt="Gravitational Force Equation 3"/>
+											<img src="../img/gravitational-forces-one.PNG" class="img-responsive slide" alt="Gravitational Force Equation 2"/>
+											<img src="../img/gravitational-forces-two.PNG" class="img-responsive slide" alt="Gravitational Force Equation 3"/>
+											<img src="../img/gravitational-forces-three.PNG" class="img-responsive slide" alt="Gravitational Force Equation 3"/>
+											<img src="../img/gravitational-forces-four.PNG" class="img-responsive slide" alt="Gravitational Force Equation 3"/>
+											<img src="../img/gravitational-forces-five.PNG" class="img-responsive slide" alt="Gravitational Force Equation 3"/>
+											<img src="../img/gravitational-forces-six.PNG" class="img-responsive slide" alt="Gravitational Force Equation 3"/>
+											<img src="../img/gravitational-forces-seven.PNG" class="img-responsive slide" alt="Gravitational Force Equation 3"/>
 										</div>
 										<div id="slide-bar-indicators">
 											<div class="slide-bar"></div>
@@ -145,7 +147,7 @@
 										</div>
 									</div>
 									<div id="solo-image">
-										<img src="../img/gravitational-forces-solo-image.png" class="img-responsive" alt="Gravitational Forces"/>
+										<img src="../img/gravitational-forces-solo-image.PNG" class="img-responsive" alt="Gravitational Forces"/>
 									</div>
 								</div>
 							</div>
@@ -294,10 +296,6 @@
 									</p>
 								</div>
 							</div>
-							<button class="accordion"><strong>Illustration</strong></button>
-							<div class="modal-panel">
-								<img src="img/gravitationalForcesAccordionImg1.png" class="img-responsive"/>
-							</div>
 							<button class="accordion"><strong>Given Variables</strong></button>
 							<div class="modal-panel">
 								<p>
@@ -309,6 +307,10 @@
 										<li><b>Distance B/w Centers :</b> 3.9 x 10<sup>8</sup> meters</li>
 									</ul>
 								</p>
+							</div>
+							<button class="accordion"><strong>Illustration</strong></button>
+							<div class="modal-panel">
+								<img src="img/gravitationalForcesAccordionImg1.PNG" class="img-responsive"/>
 							</div>
 							<button class="accordion last-accordion"><strong>Solution:</strong></button>
 							<div class="modal-panel">
@@ -342,10 +344,6 @@
 									The diameter of Jupiter is roughly 1.4 x 10^8 meters and the mass is 1.9 x 10^26 kg. Given that the universal gravitational constant is 6.7 x 10-11 N * m2 / kg2, what is the gravitational acceleration on Jupiter?
 									</p>
 								</div>
-								<button class="accordion"><strong>Illustration</strong></button>
-								<div class="modal-panel">
-									<img src="img/gravitationalForcesAccordionImg2.png" class="img-responsive"/>
-								</div>
 								<button class="accordion"><strong>Given Variables</strong></button>
 								<div class="modal-panel">
 									<p>
@@ -356,6 +354,10 @@
 											<li><b>Gravitational Constant (G) :</b> 6.7 x 10<sup>-11</sup>N*m<sup>2</sup> / kg<sup>2</sup></li>
 										</ul>
 									</p>
+								</div>
+								<button class="accordion"><strong>Illustration</strong></button>
+								<div class="modal-panel">
+									<img src="img/gravitationalForcesAccordionImg2.PNG" class="img-responsive"/>
 								</div>
 								<button class="accordion last-accordion"><strong>Solution</strong></button>
 								<div class="modal-panel">
@@ -389,10 +391,6 @@
 										When earth and saturn are at their closest distance, the distance between their centers is approximately 6.1 x 10<sup>11</sup> meters. The gravitational constant is 6.7 x 10<sup>-11</sup>. If the mass of earth is 5.98 x 10<sup>24</sup> kg and gravitational force between them is 6.1 x 10<sup>17</sup>, then what is the mass of Saturn?
 									</p>
 								</div>
-								<button class="accordion"><strong>Illustration</strong></button>
-								<div class="modal-panel">
-									<img src="img/gravitationalForcesAccordionImg3.png" class="img-responsive"/>
-								</div>
 								<button class="accordion"><strong>Given Variables</strong></button>
 								<div class="modal-panel">
 									<p>
@@ -404,6 +402,10 @@
 											<li><b>Distance b/w centers :</b>6.1 x 10<sup>11</sup></li>
 										</ul>
 									</p>
+								</div>
+								<button class="accordion"><strong>Illustration</strong></button>
+								<div class="modal-panel">
+									<img src="img/gravitationalForcesAccordionImg3.PNG" class="img-responsive"/>
 								</div>
 								<button class="accordion last-accordion"><strong>Solution</strong></button>
 								<div class="modal-panel">
@@ -464,6 +466,10 @@
 					<li><a href="forces.php" class="prev-page-btn"><span class="glyphicon glyphicon-chevron-left"></span>Previous: Forces</a></li>
 				</ul>
 			</div>
+		</div>
+
+		<div id="credits-section">
+			<div class="credits-inner text-center">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 		</div>
 
 	</section>
